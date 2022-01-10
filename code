@@ -10,6 +10,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
  if message.author.id == userid:
+  emoji = '\N{THUMBS UP SIGN}'
   await message.channel.send('message')
+  await message.add_reaction(emoji)
   
 client.run('TOKEN')
